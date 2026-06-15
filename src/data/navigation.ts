@@ -20,4 +20,8 @@ export const navigation = [
     name: "Resources",
     href: "/resources",
   },
+    {
+    name: "GDPR",
+    href: "/gdpr",
+  },
 ];
