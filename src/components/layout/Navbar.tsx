@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import {navigation} from "../../data/navigation";
 import {
 	Search,
@@ -11,11 +11,36 @@ import {
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+
+	useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
 
 	return (
-		<header className="border-b border-gray-200 bg-white">
-			<div className="max-w-7xl mx-auto px-4 xl:px-6">
+		<header className={`
+    fixed top-0 left-0 w-full z-50
+    transition-all duration-300
+    ${
+      scrolled
+        ? "bg-white border-b border-gray-200 shadow-sm"
+        : "bg-transparent border-b border-transparent"
+    }
+  `}>
+			<div className="relative z-20 max-w-7xl mx-auto px-4 xl:px-6">
 				<div className="flex items-center justify-between h-20">
 
 					{/* Logo */}
