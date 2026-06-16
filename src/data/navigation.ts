@@ -1,4 +1,10 @@
-export const navigation = [
+type NavigationItem = {
+  name: string;
+  href: string;
+  hasDropdown?: boolean;
+};
+
+export const navigation: NavigationItem[] = [
   {
     name: "Products",
     href: "/products",
@@ -20,8 +26,9 @@ export const navigation = [
     name: "Resources",
     href: "/resources",
   },
-    {
+  {
     name: "GDPR",
     href: "/gdpr",
   },
 ];
+
