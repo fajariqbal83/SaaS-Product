@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spinColors {
+  0% { --gradient-angle: 0deg; }
+  100% { --gradient-angle: 360deg; }
+}
+
+.static-shape-blend {
+  background: conic-gradient(from var(--gradient-angle) at 50% 50%, #9ccef0, #aef8c4, #ebf7cf, #e0f2fe);
+  animation: spinColors 12s linear infinite;
+}

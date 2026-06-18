@@ -40,18 +40,18 @@ const Navbar = () => {
         : "bg-transparent border-b border-transparent"
     }
   `}>
-			<div className="relative z-20 max-w-7xl mx-auto px-4 xl:px-6">
+			<div className="relative z-20 max-w-7xl my-5 mx-10 px-4 xl:px-6">
 				<div className="flex items-center justify-between h-20">
 
 					{/* Logo */}
 					<div className="flex items-center gap-3 cursor-pointer">
-						<div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center">
-							<Zap size={20}
+						<div className="w-9 h-9 rounded-full bg-green-600 flex items-center justify-center">
+							<Zap size={18}
 								fill="currentColor"
 								strokeWidth={1.5}
 								className="text-white"/>
 						</div>
-						<span className="text-2xl xl:text-3xl font-semibold tracking-tight font-mono">
+						<span className="text-xl xl:text-2xl font-semibold tracking-tight font-mono">
 							Jetpack
 						</span>
 					</div>
@@ -67,7 +67,7 @@ const Navbar = () => {
 									<a href={
 											item.href
 										}
-										className="group inline-flex items-center gap-1 text-xl text-gray-900 transition-colors">
+										className="group inline-flex items-center gap-1 text-lg text-gray-900 transition-colors">
 										<span className="relative">
 											{
 											item.name
@@ -90,18 +90,18 @@ const Navbar = () => {
 					{/* Desktop Right Side */}
 					<div className="hidden xl:flex items-center gap-6">
 						<button className="p-4 rounded-sm transition-colors text-gray-900 hover:text-white hover:bg-black">
-							<Search size={16}
+							<Search size={15}
 								strokeWidth={1.85}/>
 						</button>
 
-						<a href="/login" className="group text-xl text-gray-900 transition-colors">
+						<a href="/login" className="group text-lg text-gray-900 transition-colors">
 							<span className="relative">
 								Log in
 								<span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
 							</span>
 						</a>
 
-						<button className="px-5 py-2 border border-gray-900 rounded-sm bg-white text-lg font-medium hover:bg-black hover:text-white transition">
+						<button className="px-4.5 py-1.5 border border-gray-900 rounded-sm bg-white text-md font-medium hover:bg-black hover:text-white transition">
 							Get started
 						</button>
 					</div>
