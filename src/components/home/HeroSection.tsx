@@ -1,11 +1,9 @@
-import { useMemo } from "react";
-import { heroData } from "../../data/hero";
+import {useMemo} from "react";
+import {heroData} from "../../data/hero";
 
 const HeroSection = () => {
 	const randomImage = useMemo(() => {
-		return heroData.heroImage.images[
-			Math.floor(Math.random() * heroData.heroImage.images.length)
-		];
+		return heroData.heroImage.images[Math.floor(Math.random() * heroData.heroImage.images.length)];
 	}, []);
 
 	return (
@@ -16,26 +14,31 @@ const HeroSection = () => {
 				<div className="grid lg:grid-cols-2 items-center min-h-[90vh] gap-10 md:gap-14 lg:gap-16">
 
 					{/* LEFT SIDE */}
-					<div className="text-center lg:text-left">
+					<div className="text-left min-[400px]:text-center lg:text-left">
 
 						<h1 className="text-[34px] sm:text-[52px] md:text-[68px] lg:text-[86px] font-medium leading-[0.95] tracking-[-1px] md:tracking-[-2px] lg:tracking-[-3px] text-black">
-							{heroData.heroTitleLines[0]}
-							<br />
-							{heroData.heroTitleLines[1]}
-						</h1>
+							{
+							heroData.heroTitleLines[0]
+						}
+							<br/> {
+							heroData.heroTitleLines[1]
+						} </h1>
 
-						<p className="mt-5 md:mt-8 text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 max-w-lg leading-relaxed mx-auto lg:mx-0">
-							{heroData.heroSubtitle.split("\n").map((line, idx) => (
+						<p className="mt-5 md:mt-8 text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 max-w-lg leading-relaxed min-[400px]:mx-auto lg:mx-0">
+							{
+							heroData.heroSubtitle.split("\n").map((line, idx) => (
 								<span key={idx}>
 									{line}
-									{idx === 0 ? <br /> : null}
-								</span>
-							))}
-						</p>
+									{
+									idx === 0 ? <br/>: null
+								} </span>
+							))
+						} </p>
 
-						<button className="mt-5 bg-green-600 hover:bg-green-700 transition-all text-white px-5 sm:px-6 md:px-8 py-3 md:py-4 rounded-md text-base sm:text-lg md:text-xl font-normal">
-							{heroData.ctaLabel}
-						</button>
+						<button className="mt-5 bg-green-600 hover:bg-green-700 transition-all text-white px-5 sm:px-6 md:px-8  py-3 md:py-4 rounded-md  text-base  sm:text-lg md:text-xl font-normal  w-full  min-[400px]:w-auto">
+							{
+							heroData.ctaLabel
+						} </button>
 
 					</div>
 
@@ -43,14 +46,14 @@ const HeroSection = () => {
 					<div className="relative flex justify-center mt-8 lg:mt-0">
 
 						{/* Phone Mockup */}
-						<div className="relative w-76">
+						<div className="relative w-64 min-[400px]:w-76">
 
 							<div className="rounded-[34px] border-10 border-white shadow-2xl overflow-hidden">
-								<img
-									src={randomImage}
-									alt={heroData.heroImage.alt}
-									className="w-full h-142 object-cover"
-								/>
+								<img src={randomImage}
+									alt={
+										heroData.heroImage.alt
+									}
+									className="w-full h-120 min-[400px]:h-142 object-cover"/>
 							</div>
 
 							{/* Analytics Card */}
@@ -62,18 +65,13 @@ const HeroSection = () => {
 									</span>
 
 									<span className="text-gray-400">
-										{heroData.cards.analytics.icon}
-									</span>
+										{
+										heroData.cards.analytics.icon
+									} </span>
 								</div>
 
 								<svg viewBox="0 0 200 80" className="w-full h-20">
-									<path
-										d="M0 65 C20 70 40 10 60 35 C80 60 100 15 120 40 C140 70 170 20 200 5"
-										fill="none"
-										stroke="#08a61a"
-										strokeWidth="4"
-										strokeLinecap="round"
-									/>
+									<path d="M0 65 C20 70 40 10 60 35 C80 60 100 15 120 40 C140 70 170 20 200 5" fill="none" stroke="#08a61a" strokeWidth="4" strokeLinecap="round"/>
 								</svg>
 
 							</div>
@@ -87,38 +85,19 @@ const HeroSection = () => {
 									</span>
 
 									<span className="text-gray-400">
-										{heroData.cards.boost.icon}
-									</span>
+										{
+										heroData.cards.boost.icon
+									} </span>
 								</div>
 
 								<div className="flex-1 flex items-center justify-center">
 
 									<div className="relative w-20 h-20 lg:w-22 lg:h-22">
 
-										<svg
-											className="w-full h-full -rotate-90"
-											viewBox="0 0 100 100"
-										>
-											<circle
-												cx="50"
-												cy="50"
-												r="42"
-												stroke="#e5e7eb"
-												strokeWidth="4"
-												fill="none"
-											/>
+										<svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
+											<circle cx="50" cy="50" r="42" stroke="#e5e7eb" strokeWidth="4" fill="none"/>
 
-											<circle
-												cx="50"
-												cy="50"
-												r="42"
-												stroke="#08a61a"
-												strokeWidth="4"
-												fill="none"
-												strokeLinecap="round"
-												strokeDasharray="263.89"
-												strokeDashoffset="15.83"
-											/>
+											<circle cx="50" cy="50" r="42" stroke="#08a61a" strokeWidth="4" fill="none" strokeLinecap="round" strokeDasharray="263.89" strokeDashoffset="15.83"/>
 										</svg>
 
 										<div className="absolute inset-0 flex items-center justify-center">
@@ -140,13 +119,14 @@ const HeroSection = () => {
 
 									<span className="text-[14px] text-gray-600 leading-4">
 										Akismet Anti-
-										<br />
+										<br/>
 										spam
 									</span>
 
 									<span className="text-gray-400">
-										{heroData.cards.akismet.icon}
-									</span>
+										{
+										heroData.cards.akismet.icon
+									} </span>
 
 								</div>
 
@@ -158,7 +138,7 @@ const HeroSection = () => {
 
 									<p className="text-sm text-gray-500 text-center leading-5">
 										spam comments
-										<br />
+										<br/>
 										blocked
 									</p>
 
@@ -175,29 +155,16 @@ const HeroSection = () => {
 									</span>
 
 									<span className="text-gray-400">
-										{heroData.cards.backup.icon}
-									</span>
+										{
+										heroData.cards.backup.icon
+									} </span>
 								</div>
 
 								<div className="flex-1 flex items-center justify-center">
-									<svg
-										width="64"
-										height="64"
-										viewBox="0 0 64 64"
-										fill="none"
-									>
-										<path
-											d="M47.5 27.5C46.5 20 40.5 14 33 14C26.5 14 21 18 19 24C12 24.5 7 30 7 37C7 44.5 13 50 20.5 50H46C53 50 58 45 58 38C58 31.5 53.5 27.5 47.5 27.5Z"
-											fill="#08a61a"
-										/>
+									<svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+										<path d="M47.5 27.5C46.5 20 40.5 14 33 14C26.5 14 21 18 19 24C12 24.5 7 30 7 37C7 44.5 13 50 20.5 50H46C53 50 58 45 58 38C58 31.5 53.5 27.5 47.5 27.5Z" fill="#08a61a"/>
 
-										<path
-											d="M24 34L30 40L41 29"
-											stroke="white"
-											strokeWidth="4"
-											strokeLinecap="round"
-											strokeLinejoin="round"
-										/>
+										<path d="M24 34L30 40L41 29" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
 									</svg>
 								</div>
 
