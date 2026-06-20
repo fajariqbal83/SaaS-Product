@@ -8,8 +8,8 @@ function App() {
       <div
         className="static-shape-blend absolute top-0 right-0 z-0 pointer-events-none"
         style={{
-          width: "50%",
-          height: "200vh",
+          width: "40%",
+          height: "170vh",
           clipPath: "polygon(100% 0, 0 0, 100% 100%)", 
           filter: "blur(60px)", 
           opacity: 0.85

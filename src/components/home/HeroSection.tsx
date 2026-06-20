@@ -9,46 +9,41 @@ const HeroSection = () => {
 	}, []);
 
 	return (
-		<section className="relative overflow-hidden bg-transparent min-h-[90vh] pt-20 mb-20">
+		<section className="relative overflow-hidden bg-transparent min-h-[90vh] pt-20">
 
-			<div className="relative z-10 max-w-7xl mx-auto px-20 my-25">
+			<div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-6 md:px-12 lg:px-20 my-10 md:my-20 lg:my-25">
 
-				<div className="grid lg:grid-cols-2 items-start min-h-[90vh] gap-16">
+				<div className="grid lg:grid-cols-2 items-center min-h-[90vh] gap-10 md:gap-14 lg:gap-16">
 
 					{/* LEFT SIDE */}
-					<div>
+					<div className="text-center lg:text-left">
 
-						<h1 className="text-[46px] sm:text-[76px] lg:text-[86px] font-medium leading-[0.95] tracking-[-3px] text-black">
-							{
-								heroData.heroTitleLines[0]
-							}
-							<br /> {
-								heroData.heroTitleLines[1]
-							} </h1>
+						<h1 className="text-[34px] sm:text-[52px] md:text-[68px] lg:text-[86px] font-medium leading-[0.95] tracking-[-1px] md:tracking-[-2px] lg:tracking-[-3px] text-black">
+							{heroData.heroTitleLines[0]}
+							<br />
+							{heroData.heroTitleLines[1]}
+						</h1>
 
-						<p className="mt-8 text-md md:text-xl text-gray-700 max-w-lg leading-relaxed">
-							{
-								heroData.heroSubtitle.split("\n").map((line, idx) => (
-									<span key={idx}>
-										{line}
-										{
-											idx === 0 ? <br /> : null
-										} </span>
-								))
-							} </p>
+						<p className="mt-5 md:mt-8 text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 max-w-lg leading-relaxed mx-auto lg:mx-0">
+							{heroData.heroSubtitle.split("\n").map((line, idx) => (
+								<span key={idx}>
+									{line}
+									{idx === 0 ? <br /> : null}
+								</span>
+							))}
+						</p>
 
-						<button className="mt-5 bg-green-600 hover:bg-green-700 transition-all text-white px-8 py-4 rounded-md text-xl font-normal">
-							{
-								heroData.ctaLabel
-							} </button>
+						<button className="mt-5 bg-green-600 hover:bg-green-700 transition-all text-white px-5 sm:px-6 md:px-8 py-3 md:py-4 rounded-md text-base sm:text-lg md:text-xl font-normal">
+							{heroData.ctaLabel}
+						</button>
 
 					</div>
 
 					{/* RIGHT SIDE */}
-					<div className="relative flex justify-center">
+					<div className="relative flex justify-center mt-8 lg:mt-0">
 
 						{/* Phone Mockup */}
-						<div className="relative w-66 md:w-76 ">
+						<div className="relative w-76">
 
 							<div className="rounded-[34px] border-10 border-white shadow-2xl overflow-hidden">
 								<img
@@ -59,7 +54,7 @@ const HeroSection = () => {
 							</div>
 
 							{/* Analytics Card */}
-							<div className="absolute -left-32 top-36 bg-white/90 backdrop-blur-lg w-47.5 h-39.5 rounded-md shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5">
+							<div className="hidden md:block absolute -left-24 lg:-left-32 top-28 lg:top-36 bg-white/90 backdrop-blur-lg w-44 lg:w-47.5 h-36 lg:h-39.5 rounded-md shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5">
 
 								<div className="flex items-center justify-between mb-6">
 									<span className="text-[15px] text-gray-600 font-normal">
@@ -84,7 +79,7 @@ const HeroSection = () => {
 							</div>
 
 							{/* Boost Card */}
-							<div className="absolute -right-25 top-16 bg-white/90 backdrop-blur-lg w-40.5 h-37 rounded-md shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3 flex flex-col">
+							<div className="hidden md:flex absolute -right-18 lg:-right-25 top-20 lg:top-16 bg-white/90 backdrop-blur-lg w-36 lg:w-40.5 h-34 lg:h-37 rounded-md shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3 flex-col">
 
 								<div className="flex items-center justify-between">
 									<span className="text-[15px] text-gray-600">
@@ -98,7 +93,7 @@ const HeroSection = () => {
 
 								<div className="flex-1 flex items-center justify-center">
 
-									<div className="relative w-22 h-22">
+									<div className="relative w-20 h-20 lg:w-22 lg:h-22">
 
 										<svg
 											className="w-full h-full -rotate-90"
@@ -127,7 +122,7 @@ const HeroSection = () => {
 										</svg>
 
 										<div className="absolute inset-0 flex items-center justify-center">
-											<span className="text-[22px] font-medium text-gray-600">
+											<span className="text-[20px] lg:text-[22px] font-medium text-gray-600">
 												94
 											</span>
 										</div>
@@ -137,8 +132,9 @@ const HeroSection = () => {
 								</div>
 
 							</div>
-							{/* Akismet Anti-spam Card */}
-							<div className="absolute -left-26 bottom-22 bg-white/90 backdrop-blur-lg w-49.5 h-37 rounded-md shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5">
+
+							{/* Akismet Card */}
+							<div className="hidden md:block absolute -left-20 lg:-left-26 bottom-18 lg:bottom-22 bg-white/90 backdrop-blur-lg w-44 lg:w-49.5 h-34 lg:h-37 rounded-md shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5">
 
 								<div className="flex justify-between">
 
@@ -156,7 +152,7 @@ const HeroSection = () => {
 
 								<div className="mt-2">
 
-									<h3 className="text-[24px] font-medium text-center text-[#08a61a]">
+									<h3 className="text-[22px] lg:text-[24px] font-medium text-center text-[#08a61a]">
 										192,521
 									</h3>
 
@@ -171,7 +167,7 @@ const HeroSection = () => {
 							</div>
 
 							{/* Backup Card */}
-							<div className="absolute -right-18 bottom-35 bg-white/90 backdrop-blur-lg w-42.5 h-38.5 rounded-md shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5 flex flex-col">
+							<div className="hidden md:flex absolute -right-14 lg:-right-18 bottom-30 lg:bottom-35 bg-white/90 backdrop-blur-lg w-38 lg:w-42.5 h-34 lg:h-38.5 rounded-md shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5 flex-col">
 
 								<div className="flex justify-between">
 									<span className="text-[15px] text-gray-600">
@@ -214,6 +210,7 @@ const HeroSection = () => {
 				</div>
 
 			</div>
+
 		</section>
 	);
 };
