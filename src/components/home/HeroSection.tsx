@@ -1,6 +1,13 @@
+import { useMemo } from "react";
 import { heroData } from "../../data/hero";
 
 const HeroSection = () => {
+	const randomImage = useMemo(() => {
+		return heroData.heroImage.images[
+			Math.floor(Math.random() * heroData.heroImage.images.length)
+		];
+	}, []);
+
 	return (
 		<section className="relative overflow-hidden bg-transparent min-h-[90vh] pt-20 mb-20">
 
@@ -11,7 +18,7 @@ const HeroSection = () => {
 					{/* LEFT SIDE */}
 					<div>
 
-						<h1 className="text-[46px] md:text-[62px] lg:text-[86px] font-medium leading-[0.95] tracking-[-3px] text-black">
+						<h1 className="text-[46px] sm:text-[76px] lg:text-[86px] font-medium leading-[0.95] tracking-[-3px] text-black">
 							{
 								heroData.heroTitleLines[0]
 							}
@@ -44,13 +51,11 @@ const HeroSection = () => {
 						<div className="relative w-66 md:w-76 ">
 
 							<div className="rounded-[34px] border-10 border-white shadow-2xl overflow-hidden">
-								<img src={
-									heroData.heroImage.src
-								}
-									alt={
-										heroData.heroImage.alt
-									}
-									className="w-full h-142 object-cover" />
+								<img
+									src={randomImage}
+									alt={heroData.heroImage.alt}
+									className="w-full h-142 object-cover"
+								/>
 							</div>
 
 							{/* Analytics Card */}
@@ -133,7 +138,7 @@ const HeroSection = () => {
 
 							</div>
 							{/* Akismet Anti-spam Card */}
-							<div className="absolute -left-26 bottom-12 bg-white/90 backdrop-blur-lg w-49.5 h-37 rounded-md shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5">
+							<div className="absolute -left-26 bottom-22 bg-white/90 backdrop-blur-lg w-49.5 h-37 rounded-md shadow-[0_10px_30px_rgba(0,0,0,0.08)] p-3.5">
 
 								<div className="flex justify-between">
 

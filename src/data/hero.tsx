@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 export type HeroImage = {
-  src: string;
+  images: string[];
   alt: string;
 };
 
@@ -34,10 +34,14 @@ export const heroData: HeroSectionData = {
   heroTitleLines: ["Let's elevate", "your site"],
   heroSubtitle: "Boost your site growth, speed and security.\nNo hassle, we got you!",
   ctaLabel: "Get started",
-  heroImage: {
-    src: "/images/hero.jpg",
-    alt: "hero",
-  },
+ heroImage: {
+  images: [
+    "/images/hero.jpg",
+    "/images/hero-1.jpg",
+  ],
+  alt: "hero",
+},
+  
   cards: {
     analytics: {
       title: "Analytics",

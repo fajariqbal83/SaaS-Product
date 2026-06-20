@@ -40,7 +40,7 @@ const Navbar = () => {
         : "bg-transparent border-b border-transparent"
     }
   `}>
-			<div className="relative z-20 max-w-7xl my-5 mx-10 px-4 xl:px-6">
+			<div className="relative z-20 max-w-7xl mx-auto my-5 px-4 xl:px-6">
 				<div className="flex items-center justify-between h-20">
 
 					{/* Logo */}
