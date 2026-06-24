@@ -8,6 +8,7 @@ import BrandSection from "../components/home/BrandsSection";
 import PricingSection from "../components/home/PricingSection";
 import FinalCTASection from "../components/home/FinalCTASection";
 import DeviceShowcaseSection from "../components/home/DeviceShowcase";
+import Footer from "../components/home/Footer";
 
 const HomePage = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage = () => {
       <PricingSection/>
       <FinalCTASection/>
       <DeviceShowcaseSection/>
+      <Footer/>
     </main>
   );
 };
