@@ -22,11 +22,8 @@ const TestimonialSection = () => {
 					{/* Left Arrow */}
 					<button onClick={prevSlide}
 						className="
-							              absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20
-							              w-12 h-12 flex items-center justify-center
-							              text-gray-500 hover:text-black
-							              transition-all duration-300 hover:-translate-x-1
-							            ">
+														             absolute left-2 sm:left-4 lg:left-8 top-6 sm:top-1/2 sm:-translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center text-gray-500 hover:text-black  transition-all duration-300 hover:-translate-x-1
+														            ">
 						<ChevronLeft size={34}
 							strokeWidth={1.5}/>
 					</button>
@@ -34,11 +31,8 @@ const TestimonialSection = () => {
 					{/* Right Arrow */}
 					<button onClick={nextSlide}
 						className="
-							              absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20
-							              w-12 h-12 flex items-center justify-center
-							              text-gray-500 hover:text-black
-							              transition-all duration-300 hover:translate-x-1
-							            ">
+														            absolute right-2 sm:right-4 lg:right-8  top-6 sm:top-1/2  sm:-translate-y-1/2  z-20  w-12 h-12 flex items-center justify-center  text-gray-500 hover:text-black transition-all duration-300 hover:translate-x-1
+														            ">
 						<ChevronRight size={34}
 							strokeWidth={1.5}/>
 					</button>
@@ -53,12 +47,7 @@ const TestimonialSection = () => {
 								alt={
 									testimonials[current].name
 								}
-								className="
-									                  w-full
-									                  max-w-130
-									                  object-contain
-									                  transition-all duration-700 ease-in-out
-									                "/>
+								className="    w-full    max-w-130    object-contain    transition-all duration-700 ease-in-out  "/>
 						</div>
 
 						{/* Content */}
@@ -71,36 +60,17 @@ const TestimonialSection = () => {
 							<Quote size={44}
 								className="text-black mb-6 fill-black"/>
 
-							<p className="
-									                text-md
-									                md:text-lg
-									                lg:text-[1.5rem]
-									                leading-relaxed
-									                text-gray-900
-									                max-w-xl
-									              ">
+							<p className=" text-md md:text-lg lg:text-[1.5rem] leading-relaxed text-gray-900 max-w-xl ">
 								{
 								testimonials[current].quote
 							} </p>
 
-							<h3 className="
-									                mt-10
-									                text-3xl
-									                md:text-4xl
-									                font-medium
-									                tracking-tight
-									                text-black
-									              ">
+							<h3 className="  mt-10  text-3xl  md:text-4xl  font-medium  tracking-tight  text-black  ">
 								{
 								testimonials[current].name
 							} </h3>
 
-							<p className="
-									                mt-3
-									                text-md
-									                md:text-lg
-									                text-green-700
-									              ">
+							<p className="  mt-3 text-md md:text-lg text-green-700">
 								{
 								testimonials[current].role
 							} </p>

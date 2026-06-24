@@ -7,11 +7,11 @@ const HeroSection = () => {
 	}, []);
 
 	return (
-		<section className="relative overflow-hidden bg-transparent min-h-[90vh] mt-10 pt-20">
+		<section className="relative overflow-hidden bg-transparent pt-24 pb-12 md:pt-32 md:pb-20">
 
 			<div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 md:px-12 lg:px-20">
 
-				<div className="grid lg:grid-cols-2 items-center min-h-[90vh] gap-10 md:gap-14 lg:gap-16">
+				<div className="grid lg:grid-cols-2 items-center lg:min-h-[40vh] gap-10 md:gap-14 lg:gap-16">
 
 					{/* LEFT SIDE */}
 					<div className="text-center lg:text-left">
