@@ -3,7 +3,7 @@ import { pricingData } from "../../data/pricing";
 
 const PricingSection = () => {
     return (
-        <section className="relative overflow-hidden py-16 lg:py-24 bg-white">
+        <section className="relative overflow-hidden py-16 lg:py-24">
             <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10">
 
                 {/* Heading */}
@@ -50,7 +50,7 @@ const PricingSection = () => {
 
                                 {/* Price */}
                                 <div className="mt-4">
-                                    <div className="text-4xl font-bold text-black">
+                                    <div className="text-4xl font-bold text-black break-words">
                                         {plan.price}
                                     </div>
 
