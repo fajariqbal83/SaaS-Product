@@ -13,17 +13,17 @@ import Footer from "../components/home/Footer";
 const HomePage = () => {
   return (
     <main>
-      <HeroSection/>
-      <FeatureSectionOne/>
-      <FeatureSectionTwo/>
-      <FeatureSectionThree/>
-      <TestimonialSection/>
-      <DemoSection/>
-      <BrandSection/>
-      <PricingSection/>
-      <FinalCTASection/>
-      <DeviceShowcaseSection/>
-      <Footer/>
+      <HeroSection />
+      <FeatureSectionOne />
+      <FeatureSectionTwo />
+      <FeatureSectionThree />
+      <TestimonialSection />
+      <DemoSection />
+      <BrandSection />
+      <PricingSection />
+      <FinalCTASection />
+      <DeviceShowcaseSection />
+      <Footer />
     </main>
   );
 };
