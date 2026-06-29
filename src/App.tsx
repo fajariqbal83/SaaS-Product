@@ -3,6 +3,7 @@ import Navbar from "./components/layout/Navbar";
 import HomePage from "./Pages/HomePage";
 import LoginPage from "./Pages/LoginPage";
 import CreateAccountPage from "./Pages/CreateAccountPage";
+import PricingPage from "./Pages/PricingPage";
 
 function App() {
   return (
@@ -34,8 +35,23 @@ function App() {
 
       {/* Login Route */}
       <Route path="/login" element={<LoginPage />} />
+
       {/* Create Account Route */}
       <Route path="/create-account" element={<CreateAccountPage />} />
+
+      {/* Pricing Route */}
+      <Route
+        path="/pricing"
+        element={
+          <div className="relative min-h-screen bg-[#f8f8f6] overflow-hidden">
+            <Navbar />
+
+            <div className="relative z-10">
+              <PricingPage />
+            </div>
+          </div>
+        }
+      />
     </Routes>
   );
 }
