@@ -3,7 +3,9 @@ import { pricingBundles } from "../../data/pricingBundles";
 const PricingBundles = () => {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
-      <h1 className="mx-auto mb-16 max-w-7xl text-center text-4xl font-bold leading-tight text-[#1d2b3a] sm:text-2xl lg:text-4xl lg:whitespace-nowrap">
+      <h1
+        className="mx-auto max-w-5xl mb-10 md:mb-14 lg:mb-16 text-center font-bold leading-tight text-[#1d2b3a] text-2xl sm:text-3xl md:text-4xl"
+      >
         {pricingBundles.heading}
       </h1>
 

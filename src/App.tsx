@@ -12,7 +12,7 @@ function App() {
       <Route
         path="/"
         element={
-          <div className="relative min-h-screen bg-[#f8f8f6] overflow-hidden">
+          <div className="relative min-h-screen bg-white overflow-hidden">
             <div
               className="static-shape-blend absolute top-0 right-0 z-0 pointer-events-none"
               style={{
@@ -43,7 +43,7 @@ function App() {
       <Route
         path="/pricing"
         element={
-          <div className="relative min-h-screen bg-[#f8f8f6] overflow-hidden">
+          <div className="relative min-h-screen bg-white overflow-hidden">
             <Navbar />
 
             <div className="relative z-10">
