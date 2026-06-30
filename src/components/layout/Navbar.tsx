@@ -45,20 +45,20 @@ const Navbar = () => {
 
 					{/* Logo */}
 					<Link to="/">
-					<div className="flex items-center gap-2 cursor-pointer">
-    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-green-600 flex items-center justify-center">
-        <Zap
-            size={14}
-            fill="currentColor"
-            strokeWidth={1.5}
-            className="text-white"
-        />
-    </div>
+						<div className="flex items-center gap-2 cursor-pointer">
+							<div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-green-600 flex items-center justify-center">
+								<Zap
+									size={14}
+									fill="currentColor"
+									strokeWidth={1.5}
+									className="text-white"
+								/>
+							</div>
 
-    <span className="text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold tracking-tight font-mono whitespace-nowrap">
-        Jetpack
-    </span>
-</div>
+							<span className="text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold tracking-tight font-mono whitespace-nowrap">
+								Jetpack
+							</span>
+						</div>
 
 					</Link>
 
@@ -117,25 +117,23 @@ const Navbar = () => {
 
 					{/* Mobile Menu Button */}
 					<button
-    onClick={() => setIsOpen(!isOpen)}
-    className={`lg:hidden flex items-center gap-1.5 px-3 py-2 rounded-sm text-sm sm:text-base font-medium transition-all duration-300 ease-out
+						onClick={() => setIsOpen(!isOpen)}
+						className={`lg:hidden flex items-center gap-1.5 px-3 py-2 rounded-sm text-sm sm:text-base font-medium transition-all duration-300 ease-out
 
-    ${
-        isOpen
-            ? "border border-black"
-            : "border border-transparent hover:bg-black hover:text-white hover:scale-105"
-    }`}
->
-    <span
-        className={`transition-transform duration-300 ${
-            isOpen ? "rotate-90" : "rotate-0"
-        }`}
-    >
-        {isOpen ? <X size={18} /> : <Menu size={18} />}
-    </span>
+    ${isOpen
+								? "border border-black"
+								: "border border-transparent hover:bg-black hover:text-white hover:scale-105"
+							}`}
+					>
+						<span
+							className={`transition-transform duration-300 ${isOpen ? "rotate-90" : "rotate-0"
+								}`}
+						>
+							{isOpen ? <X size={18} /> : <Menu size={18} />}
+						</span>
 
-    <span>MENU</span>
-</button>
+						<span>MENU</span>
+					</button>
 				</div>
 
 				{/* Mobile Menu */}
